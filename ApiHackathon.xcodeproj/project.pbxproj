@@ -12,9 +12,22 @@
 		D3C6E51C1EF4F60C007A24ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C6E51A1EF4F60C007A24ED /* Main.storyboard */; };
 		D3C6E51E1EF4F60D007A24ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3C6E51D1EF4F60D007A24ED /* Assets.xcassets */; };
 		D3C6E5211EF4F60D007A24ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C6E51F1EF4F60D007A24ED /* LaunchScreen.storyboard */; };
+		D3C6E52B1EF4FE05007A24ED /* gridViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6E5291EF4FE05007A24ED /* gridViewCell.swift */; };
+		D3C6E52C1EF4FE05007A24ED /* gridViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3C6E52A1EF4FE05007A24ED /* gridViewCell.xib */; };
+		D3C6E52F1EF50189007A24ED /* gridViewHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6E52D1EF50189007A24ED /* gridViewHeaderCell.swift */; };
+		D3C6E5301EF50189007A24ED /* gridViewHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3C6E52E1EF50189007A24ED /* gridViewHeaderCell.xib */; };
+		D3C6E5331EF513F2007A24ED /* FuelPriceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6E5321EF513F2007A24ED /* FuelPriceController.swift */; };
+		D3C6E5361EF519E0007A24ED /* HADropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6E5351EF519E0007A24ED /* HADropDown.swift */; };
+		D3C6E5381EF52E68007A24ED /* ChennaiTrainRouteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6E5371EF52E68007A24ED /* ChennaiTrainRouteController.swift */; };
+		D3C6E53C1EF5383C007A24ED /* TrainListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6E53A1EF5383C007A24ED /* TrainListCell.swift */; };
+		D3C6E53D1EF5383C007A24ED /* TrainListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3C6E53B1EF5383C007A24ED /* TrainListCell.xib */; };
+		D3C6E53F1EF53A64007A24ED /* TrainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6E53E1EF53A64007A24ED /* TrainListViewController.swift */; };
+		E537B5E272E1826760D31771 /* Pods_ApiHackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A6A97FB84EFBCE242C1FA84 /* Pods_ApiHackathon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A6A97FB84EFBCE242C1FA84 /* Pods_ApiHackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApiHackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB8DF7ED8396B2EC1904822C /* Pods-ApiHackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiHackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-ApiHackathon/Pods-ApiHackathon.release.xcconfig"; sourceTree = "<group>"; };
 		D3C6E5131EF4F60C007A24ED /* ApiHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApiHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C6E5161EF4F60C007A24ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3C6E5181EF4F60C007A24ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +35,17 @@
 		D3C6E51D1EF4F60D007A24ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3C6E5201EF4F60D007A24ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3C6E5221EF4F60D007A24ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3C6E5291EF4FE05007A24ED /* gridViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = gridViewCell.swift; path = GridViewLayout/gridViewCell.swift; sourceTree = "<group>"; };
+		D3C6E52A1EF4FE05007A24ED /* gridViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = gridViewCell.xib; path = GridViewLayout/gridViewCell.xib; sourceTree = "<group>"; };
+		D3C6E52D1EF50189007A24ED /* gridViewHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = gridViewHeaderCell.swift; path = GridViewLayout/gridViewHeaderCell.swift; sourceTree = "<group>"; };
+		D3C6E52E1EF50189007A24ED /* gridViewHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = gridViewHeaderCell.xib; path = GridViewLayout/gridViewHeaderCell.xib; sourceTree = "<group>"; };
+		D3C6E5321EF513F2007A24ED /* FuelPriceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FuelPriceController.swift; path = Controller/FuelPriceController.swift; sourceTree = "<group>"; };
+		D3C6E5351EF519E0007A24ED /* HADropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HADropDown.swift; path = ThirdParty/HADropDown.swift; sourceTree = "<group>"; };
+		D3C6E5371EF52E68007A24ED /* ChennaiTrainRouteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChennaiTrainRouteController.swift; path = Controller/ChennaiTrainRouteController.swift; sourceTree = "<group>"; };
+		D3C6E53A1EF5383C007A24ED /* TrainListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrainListCell.swift; path = TrainListCell/TrainListCell.swift; sourceTree = "<group>"; };
+		D3C6E53B1EF5383C007A24ED /* TrainListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TrainListCell.xib; path = TrainListCell/TrainListCell.xib; sourceTree = "<group>"; };
+		D3C6E53E1EF53A64007A24ED /* TrainListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrainListViewController.swift; path = Controller/TrainListViewController.swift; sourceTree = "<group>"; };
+		DA2CE30EA13359004455A536 /* Pods-ApiHackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiHackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ApiHackathon/Pods-ApiHackathon.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E537B5E272E1826760D31771 /* Pods_ApiHackathon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16D6FB23C0F885B21726C50E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA2CE30EA13359004455A536 /* Pods-ApiHackathon.debug.xcconfig */,
+				BB8DF7ED8396B2EC1904822C /* Pods-ApiHackathon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A7D603A39EABA257C3D5A610 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A6A97FB84EFBCE242C1FA84 /* Pods_ApiHackathon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D3C6E50A1EF4F60C007A24ED = {
 			isa = PBXGroup;
 			children = (
 				D3C6E5151EF4F60C007A24ED /* ApiHackathon */,
 				D3C6E5141EF4F60C007A24ED /* Products */,
+				16D6FB23C0F885B21726C50E /* Pods */,
+				A7D603A39EABA257C3D5A610 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +98,56 @@
 		D3C6E5151EF4F60C007A24ED /* ApiHackathon */ = {
 			isa = PBXGroup;
 			children = (
+				D3C6E5391EF53802007A24ED /* TrainListCell */,
+				D3C6E5341EF519C7007A24ED /* ThirdParty */,
+				D3C6E5311EF513CD007A24ED /* Controller */,
+				D3C6E5281EF4FDCA007A24ED /* GridViewLayout */,
 				D3C6E5161EF4F60C007A24ED /* AppDelegate.swift */,
-				D3C6E5181EF4F60C007A24ED /* ViewController.swift */,
 				D3C6E51A1EF4F60C007A24ED /* Main.storyboard */,
 				D3C6E51D1EF4F60D007A24ED /* Assets.xcassets */,
 				D3C6E51F1EF4F60D007A24ED /* LaunchScreen.storyboard */,
 				D3C6E5221EF4F60D007A24ED /* Info.plist */,
 			);
 			path = ApiHackathon;
+			sourceTree = "<group>";
+		};
+		D3C6E5281EF4FDCA007A24ED /* GridViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				D3C6E5291EF4FE05007A24ED /* gridViewCell.swift */,
+				D3C6E52A1EF4FE05007A24ED /* gridViewCell.xib */,
+				D3C6E52D1EF50189007A24ED /* gridViewHeaderCell.swift */,
+				D3C6E52E1EF50189007A24ED /* gridViewHeaderCell.xib */,
+			);
+			name = GridViewLayout;
+			sourceTree = "<group>";
+		};
+		D3C6E5311EF513CD007A24ED /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D3C6E5181EF4F60C007A24ED /* ViewController.swift */,
+				D3C6E5321EF513F2007A24ED /* FuelPriceController.swift */,
+				D3C6E5371EF52E68007A24ED /* ChennaiTrainRouteController.swift */,
+				D3C6E53E1EF53A64007A24ED /* TrainListViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D3C6E5341EF519C7007A24ED /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				D3C6E5351EF519E0007A24ED /* HADropDown.swift */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		D3C6E5391EF53802007A24ED /* TrainListCell */ = {
+			isa = PBXGroup;
+			children = (
+				D3C6E53A1EF5383C007A24ED /* TrainListCell.swift */,
+				D3C6E53B1EF5383C007A24ED /* TrainListCell.xib */,
+			);
+			name = TrainListCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +157,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3C6E5251EF4F60D007A24ED /* Build configuration list for PBXNativeTarget "ApiHackathon" */;
 			buildPhases = (
+				7CDFC181DA56C8254F3409CC /* [CP] Check Pods Manifest.lock */,
 				D3C6E50F1EF4F60C007A24ED /* Sources */,
 				D3C6E5101EF4F60C007A24ED /* Frameworks */,
 				D3C6E5111EF4F60C007A24ED /* Resources */,
+				6A404D3660ED6D0AC914B4E4 /* [CP] Embed Pods Frameworks */,
+				62EFE88A73FC1124FB2E321F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,19 +214,77 @@
 			files = (
 				D3C6E5211EF4F60D007A24ED /* LaunchScreen.storyboard in Resources */,
 				D3C6E51E1EF4F60D007A24ED /* Assets.xcassets in Resources */,
+				D3C6E53D1EF5383C007A24ED /* TrainListCell.xib in Resources */,
+				D3C6E52C1EF4FE05007A24ED /* gridViewCell.xib in Resources */,
 				D3C6E51C1EF4F60C007A24ED /* Main.storyboard in Resources */,
+				D3C6E5301EF50189007A24ED /* gridViewHeaderCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		62EFE88A73FC1124FB2E321F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ApiHackathon/Pods-ApiHackathon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A404D3660ED6D0AC914B4E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ApiHackathon/Pods-ApiHackathon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CDFC181DA56C8254F3409CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D3C6E50F1EF4F60C007A24ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3C6E53C1EF5383C007A24ED /* TrainListCell.swift in Sources */,
+				D3C6E5381EF52E68007A24ED /* ChennaiTrainRouteController.swift in Sources */,
+				D3C6E5331EF513F2007A24ED /* FuelPriceController.swift in Sources */,
 				D3C6E5191EF4F60C007A24ED /* ViewController.swift in Sources */,
+				D3C6E52F1EF50189007A24ED /* gridViewHeaderCell.swift in Sources */,
+				D3C6E53F1EF53A64007A24ED /* TrainListViewController.swift in Sources */,
 				D3C6E5171EF4F60C007A24ED /* AppDelegate.swift in Sources */,
+				D3C6E52B1EF4FE05007A24ED /* gridViewCell.swift in Sources */,
+				D3C6E5361EF519E0007A24ED /* HADropDown.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +405,7 @@
 		};
 		D3C6E5261EF4F60D007A24ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA2CE30EA13359004455A536 /* Pods-ApiHackathon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ApiHackathon/Info.plist;
@@ -270,6 +418,7 @@
 		};
 		D3C6E5271EF4F60D007A24ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB8DF7ED8396B2EC1904822C /* Pods-ApiHackathon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ApiHackathon/Info.plist;
@@ -299,6 +448,7 @@
 				D3C6E5271EF4F60D007A24ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

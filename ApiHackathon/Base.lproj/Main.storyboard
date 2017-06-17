@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WQg-HR-TaM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ApiHackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,201 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Yxx-kt-sju">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.93725490199999995" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Ao-z8-MHb">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="pPc-et-hZr"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="BRN-PK-p4i"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Yxx-kt-sju" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EK0-dZ-rKr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Yxx-kt-sju" secondAttribute="bottom" id="JUe-Pf-Xy6"/>
+                            <constraint firstAttribute="trailing" secondItem="Yxx-kt-sju" secondAttribute="trailing" id="MkV-8V-pla"/>
+                            <constraint firstItem="Yxx-kt-sju" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qjx-I0-wQj"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="4i0-us-3QO"/>
+                    <connections>
+                        <outlet property="gridViewCollectionview" destination="Yxx-kt-sju" id="qQK-IO-IGr"/>
+                        <segue destination="9yv-rh-ieS" kind="show" identifier="passFuelData" id="V7a-VX-rkD"/>
+                        <segue destination="lz5-5N-6IC" kind="show" identifier="passChennaiRouteData" id="D8T-qd-XSv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1201" y="237"/>
+        </scene>
+        <!--Chennai Train Route Controller-->
+        <scene sceneID="DgA-Qc-onm">
+            <objects>
+                <viewController id="lz5-5N-6IC" customClass="ChennaiTrainRouteController" customModule="ApiHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8rT-Jg-LBm"/>
+                        <viewControllerLayoutGuide type="bottom" id="XDj-Y6-A1m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d7c-EC-Fnr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AIk-i1-VBG" customClass="HADropDown" customModule="ApiHackathon" customModuleProvider="target">
+                                <rect key="frame" x="16" y="127" width="300" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Source"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hNE-Bg-gan" customClass="HADropDown" customModule="ApiHackathon" customModuleProvider="target">
+                                <rect key="frame" x="25" y="232" width="300" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Destination"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AeX-id-6n4">
+                                <rect key="frame" x="152" y="366" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="searchBtn:" destination="lz5-5N-6IC" eventType="touchUpInside" id="REe-WU-Owo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="destinaitonDropDown" destination="hNE-Bg-gan" id="TEu-Cl-YnE"/>
+                        <outlet property="sourceDestination" destination="AIk-i1-VBG" id="eF3-Yv-qe9"/>
+                        <segue destination="jbf-Qk-Mp1" kind="show" identifier="passTrainList" id="e2H-iv-era"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kuD-k2-OQ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1897" y="955"/>
+        </scene>
+        <!--Train List View Controller-->
+        <scene sceneID="sut-ZM-dlw">
+            <objects>
+                <viewController id="jbf-Qk-Mp1" customClass="TrainListViewController" customModule="ApiHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="74h-HK-tAc"/>
+                        <viewControllerLayoutGuide type="bottom" id="snV-4X-oFO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="plN-bR-7hT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AO2-Ng-s5b">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="jbf-Qk-Mp1" id="7to-xc-EOP"/>
+                                    <outlet property="delegate" destination="jbf-Qk-Mp1" id="yrv-V6-Rt1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AO2-Ng-s5b" firstAttribute="top" secondItem="74h-HK-tAc" secondAttribute="bottom" id="9zK-6L-vCi"/>
+                            <constraint firstItem="snV-4X-oFO" firstAttribute="top" secondItem="AO2-Ng-s5b" secondAttribute="bottom" id="WFh-tQ-fO9"/>
+                            <constraint firstItem="AO2-Ng-s5b" firstAttribute="leading" secondItem="plN-bR-7hT" secondAttribute="leading" id="hbJ-zo-Hlh"/>
+                            <constraint firstAttribute="trailing" secondItem="AO2-Ng-s5b" secondAttribute="trailing" id="lwL-td-RgQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="trainlistTableView" destination="AO2-Ng-s5b" id="953-fU-1eP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f4p-5p-O8N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2683" y="877"/>
+        </scene>
+        <!--Fuel Price Controller-->
+        <scene sceneID="vRt-XJ-7bC">
+            <objects>
+                <viewController id="9yv-rh-ieS" customClass="FuelPriceController" customModule="ApiHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8DV-QT-YOY"/>
+                        <viewControllerLayoutGuide type="bottom" id="nRu-Vw-zRd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hgP-Oh-b9i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vsm-UZ-wR0" customClass="HADropDown" customModule="ApiHackathon" customModuleProvider="target">
+                                <rect key="frame" x="38" y="100" width="300" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Select the city"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SOh-dr-Wno" customClass="HADropDown" customModule="ApiHackathon" customModuleProvider="target">
+                                <rect key="frame" x="38" y="160" width="300" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Type"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUc-g3-JRy">
+                                <rect key="frame" x="155" y="271" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="searchBtn:" destination="9yv-rh-ieS" eventType="touchUpInside" id="3U4-4K-e6U"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPT-GF-6CK">
+                                <rect key="frame" x="97" y="368" width="223" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="dropdown" destination="Vsm-UZ-wR0" id="4Qw-Yo-IR5"/>
+                        <outlet property="priceLabel" destination="LPT-GF-6CK" id="jvs-Ze-aoX"/>
+                        <outlet property="typesDropdown" destination="SOh-dr-Wno" id="Syj-b6-XFj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qMP-lx-PDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1896.8" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NZd-MB-fWa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WQg-HR-TaM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="67I-WY-o7W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8wz-fW-9FP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VNj-1x-Rbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92" y="-543.77811094452773"/>
         </scene>
     </scenes>
 </document>
