@@ -9,6 +9,118 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Cricket View Controller-->
+        <scene sceneID="HXG-qy-JHr">
+            <objects>
+                <viewController id="54O-R5-pw8" customClass="CricketViewController" customModule="ApiHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ajt-3O-kV1"/>
+                        <viewControllerLayoutGuide type="bottom" id="HKW-sQ-HnO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yXE-eU-Q8W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="geS-tQ-TIT">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="54O-R5-pw8" id="Rzo-rf-TeL"/>
+                                    <outlet property="delegate" destination="54O-R5-pw8" id="GMx-gb-HZ9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HKW-sQ-HnO" firstAttribute="top" secondItem="geS-tQ-TIT" secondAttribute="bottom" id="RCF-Nl-7JE"/>
+                            <constraint firstItem="geS-tQ-TIT" firstAttribute="leading" secondItem="yXE-eU-Q8W" secondAttribute="leading" id="Slp-al-5Yb"/>
+                            <constraint firstAttribute="trailing" secondItem="geS-tQ-TIT" secondAttribute="trailing" id="cR2-zE-NIE"/>
+                            <constraint firstItem="geS-tQ-TIT" firstAttribute="top" secondItem="ajt-3O-kV1" secondAttribute="bottom" id="nxd-kt-2Fq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cricketTableList" destination="geS-tQ-TIT" id="Po1-GW-eGK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zED-aE-jJO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="399" y="231"/>
+        </scene>
+        <!--News Article View Controller-->
+        <scene sceneID="8kv-3s-B5R">
+            <objects>
+                <viewController id="2d6-wj-nY2" customClass="NewsArticleViewController" customModule="ApiHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xnp-cM-f1l"/>
+                        <viewControllerLayoutGuide type="bottom" id="R5i-VR-GTf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="53G-rG-Xur">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ukg-EB-Ka8">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="2d6-wj-nY2" id="hnp-BF-x1l"/>
+                                    <outlet property="delegate" destination="2d6-wj-nY2" id="jvE-l0-j8A"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ukg-EB-Ka8" secondAttribute="trailing" id="0Ty-lF-6dL"/>
+                            <constraint firstItem="R5i-VR-GTf" firstAttribute="top" secondItem="ukg-EB-Ka8" secondAttribute="bottom" id="F0L-ki-wkw"/>
+                            <constraint firstItem="ukg-EB-Ka8" firstAttribute="leading" secondItem="53G-rG-Xur" secondAttribute="leading" id="tcR-at-AGh"/>
+                            <constraint firstItem="ukg-EB-Ka8" firstAttribute="top" secondItem="xnp-cM-f1l" secondAttribute="bottom" id="zQn-JZ-Zag"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="newsArticleTableView" destination="ukg-EB-Ka8" id="XEr-aO-Gnb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bkf-s5-uJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-105" y="869"/>
+        </scene>
+        <!--News Source List View Controller-->
+        <scene sceneID="B1e-Pw-BBZ">
+            <objects>
+                <viewController id="OMF-Kg-LjK" customClass="NewsSourceListViewController" customModule="ApiHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2G7-z6-Hdi"/>
+                        <viewControllerLayoutGuide type="bottom" id="RPA-tM-IHq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hck-0k-ZcQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="i6Y-7Q-V3g">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="OMF-Kg-LjK" id="wDU-cX-8Ap"/>
+                                    <outlet property="delegate" destination="OMF-Kg-LjK" id="HDF-pm-Xpp"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="i6Y-7Q-V3g" secondAttribute="trailing" id="92Y-s0-iDL"/>
+                            <constraint firstItem="i6Y-7Q-V3g" firstAttribute="top" secondItem="2G7-z6-Hdi" secondAttribute="bottom" id="E3u-wa-BlS"/>
+                            <constraint firstItem="RPA-tM-IHq" firstAttribute="top" secondItem="i6Y-7Q-V3g" secondAttribute="bottom" id="JkV-bf-eHv"/>
+                            <constraint firstItem="i6Y-7Q-V3g" firstAttribute="leading" secondItem="Hck-0k-ZcQ" secondAttribute="leading" id="Mvn-d1-Zjf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="newsSourceTableView" destination="i6Y-7Q-V3g" id="Y6y-OY-Zz2"/>
+                        <segue destination="2d6-wj-nY2" kind="show" identifier="passDataInArticle" id="XV8-Ug-RQe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NSS-go-Ujs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="634" y="870"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -50,6 +162,8 @@
                         <outlet property="gridViewCollectionview" destination="Yxx-kt-sju" id="qQK-IO-IGr"/>
                         <segue destination="9yv-rh-ieS" kind="show" identifier="passFuelData" id="V7a-VX-rkD"/>
                         <segue destination="lz5-5N-6IC" kind="show" identifier="passChennaiRouteData" id="D8T-qd-XSv"/>
+                        <segue destination="54O-R5-pw8" kind="show" identifier="passCricketData" id="kul-8B-rVM"/>
+                        <segue destination="OMF-Kg-LjK" kind="show" identifier="passNewsSourceData" id="gmG-HV-aam"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

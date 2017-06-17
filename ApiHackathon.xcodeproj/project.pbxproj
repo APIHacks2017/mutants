@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3BFEF421EF5425E0065F99D /* CricketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BFEF411EF5425E0065F99D /* CricketViewController.swift */; };
+		D3BFEF451EF545A70065F99D /* CricketList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BFEF441EF545A70065F99D /* CricketList.swift */; };
+		D3BFEF491EF548010065F99D /* CricketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BFEF471EF548010065F99D /* CricketCell.swift */; };
+		D3BFEF4A1EF548010065F99D /* CricketCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3BFEF481EF548010065F99D /* CricketCell.xib */; };
+		D3BFEF4C1EF54C170065F99D /* NewsSourceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BFEF4B1EF54C170065F99D /* NewsSourceListViewController.swift */; };
+		D3BFEF4E1EF54C2E0065F99D /* NewsArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BFEF4D1EF54C2E0065F99D /* NewsArticleViewController.swift */; };
+		D3BFEF501EF54D040065F99D /* CricketSourceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BFEF4F1EF54D040065F99D /* CricketSourceList.swift */; };
+		D3BFEF521EF54D130065F99D /* CricketArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BFEF511EF54D130065F99D /* CricketArticle.swift */; };
+		D3BFEF561EF550130065F99D /* NewsSourceListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BFEF541EF550130065F99D /* NewsSourceListCell.swift */; };
+		D3BFEF571EF550130065F99D /* NewsSourceListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3BFEF551EF550130065F99D /* NewsSourceListCell.xib */; };
+		D3BFEF5A1EF554A00065F99D /* NewsArticleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BFEF581EF554A00065F99D /* NewsArticleListCell.swift */; };
+		D3BFEF5B1EF554A00065F99D /* NewsArticleListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3BFEF591EF554A00065F99D /* NewsArticleListCell.xib */; };
 		D3C6E5171EF4F60C007A24ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6E5161EF4F60C007A24ED /* AppDelegate.swift */; };
 		D3C6E5191EF4F60C007A24ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6E5181EF4F60C007A24ED /* ViewController.swift */; };
 		D3C6E51C1EF4F60C007A24ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C6E51A1EF4F60C007A24ED /* Main.storyboard */; };
@@ -14,8 +26,6 @@
 		D3C6E5211EF4F60D007A24ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C6E51F1EF4F60D007A24ED /* LaunchScreen.storyboard */; };
 		D3C6E52B1EF4FE05007A24ED /* gridViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6E5291EF4FE05007A24ED /* gridViewCell.swift */; };
 		D3C6E52C1EF4FE05007A24ED /* gridViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3C6E52A1EF4FE05007A24ED /* gridViewCell.xib */; };
-		D3C6E52F1EF50189007A24ED /* gridViewHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6E52D1EF50189007A24ED /* gridViewHeaderCell.swift */; };
-		D3C6E5301EF50189007A24ED /* gridViewHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3C6E52E1EF50189007A24ED /* gridViewHeaderCell.xib */; };
 		D3C6E5331EF513F2007A24ED /* FuelPriceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6E5321EF513F2007A24ED /* FuelPriceController.swift */; };
 		D3C6E5361EF519E0007A24ED /* HADropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6E5351EF519E0007A24ED /* HADropDown.swift */; };
 		D3C6E5381EF52E68007A24ED /* ChennaiTrainRouteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6E5371EF52E68007A24ED /* ChennaiTrainRouteController.swift */; };
@@ -28,6 +38,18 @@
 /* Begin PBXFileReference section */
 		7A6A97FB84EFBCE242C1FA84 /* Pods_ApiHackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApiHackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8DF7ED8396B2EC1904822C /* Pods-ApiHackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApiHackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-ApiHackathon/Pods-ApiHackathon.release.xcconfig"; sourceTree = "<group>"; };
+		D3BFEF411EF5425E0065F99D /* CricketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CricketViewController.swift; path = Controller/CricketViewController.swift; sourceTree = "<group>"; };
+		D3BFEF441EF545A70065F99D /* CricketList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CricketList.swift; path = Model/CricketList.swift; sourceTree = "<group>"; };
+		D3BFEF471EF548010065F99D /* CricketCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CricketCell.swift; path = CricketCell/CricketCell.swift; sourceTree = "<group>"; };
+		D3BFEF481EF548010065F99D /* CricketCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CricketCell.xib; path = CricketCell/CricketCell.xib; sourceTree = "<group>"; };
+		D3BFEF4B1EF54C170065F99D /* NewsSourceListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsSourceListViewController.swift; path = Controller/NewsSourceListViewController.swift; sourceTree = "<group>"; };
+		D3BFEF4D1EF54C2E0065F99D /* NewsArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsArticleViewController.swift; path = Controller/NewsArticleViewController.swift; sourceTree = "<group>"; };
+		D3BFEF4F1EF54D040065F99D /* CricketSourceList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CricketSourceList.swift; path = Model/CricketSourceList.swift; sourceTree = "<group>"; };
+		D3BFEF511EF54D130065F99D /* CricketArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CricketArticle.swift; path = Model/CricketArticle.swift; sourceTree = "<group>"; };
+		D3BFEF541EF550130065F99D /* NewsSourceListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsSourceListCell.swift; path = NewsGroupCell/NewsSourceListCell.swift; sourceTree = "<group>"; };
+		D3BFEF551EF550130065F99D /* NewsSourceListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewsSourceListCell.xib; path = NewsGroupCell/NewsSourceListCell.xib; sourceTree = "<group>"; };
+		D3BFEF581EF554A00065F99D /* NewsArticleListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsArticleListCell.swift; path = NewsGroupCell/NewsArticleListCell.swift; sourceTree = "<group>"; };
+		D3BFEF591EF554A00065F99D /* NewsArticleListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewsArticleListCell.xib; path = NewsGroupCell/NewsArticleListCell.xib; sourceTree = "<group>"; };
 		D3C6E5131EF4F60C007A24ED /* ApiHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApiHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C6E5161EF4F60C007A24ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3C6E5181EF4F60C007A24ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,8 +59,6 @@
 		D3C6E5221EF4F60D007A24ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3C6E5291EF4FE05007A24ED /* gridViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = gridViewCell.swift; path = GridViewLayout/gridViewCell.swift; sourceTree = "<group>"; };
 		D3C6E52A1EF4FE05007A24ED /* gridViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = gridViewCell.xib; path = GridViewLayout/gridViewCell.xib; sourceTree = "<group>"; };
-		D3C6E52D1EF50189007A24ED /* gridViewHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = gridViewHeaderCell.swift; path = GridViewLayout/gridViewHeaderCell.swift; sourceTree = "<group>"; };
-		D3C6E52E1EF50189007A24ED /* gridViewHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = gridViewHeaderCell.xib; path = GridViewLayout/gridViewHeaderCell.xib; sourceTree = "<group>"; };
 		D3C6E5321EF513F2007A24ED /* FuelPriceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FuelPriceController.swift; path = Controller/FuelPriceController.swift; sourceTree = "<group>"; };
 		D3C6E5351EF519E0007A24ED /* HADropDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HADropDown.swift; path = ThirdParty/HADropDown.swift; sourceTree = "<group>"; };
 		D3C6E5371EF52E68007A24ED /* ChennaiTrainRouteController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChennaiTrainRouteController.swift; path = Controller/ChennaiTrainRouteController.swift; sourceTree = "<group>"; };
@@ -77,6 +97,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D3BFEF431EF545950065F99D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3BFEF441EF545A70065F99D /* CricketList.swift */,
+				D3BFEF4F1EF54D040065F99D /* CricketSourceList.swift */,
+				D3BFEF511EF54D130065F99D /* CricketArticle.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D3BFEF461EF547D60065F99D /* CricketListCell */ = {
+			isa = PBXGroup;
+			children = (
+				D3BFEF471EF548010065F99D /* CricketCell.swift */,
+				D3BFEF481EF548010065F99D /* CricketCell.xib */,
+			);
+			name = CricketListCell;
+			sourceTree = "<group>";
+		};
+		D3BFEF531EF54FE90065F99D /* NewsGroup */ = {
+			isa = PBXGroup;
+			children = (
+				D3BFEF541EF550130065F99D /* NewsSourceListCell.swift */,
+				D3BFEF551EF550130065F99D /* NewsSourceListCell.xib */,
+				D3BFEF581EF554A00065F99D /* NewsArticleListCell.swift */,
+				D3BFEF591EF554A00065F99D /* NewsArticleListCell.xib */,
+			);
+			name = NewsGroup;
+			sourceTree = "<group>";
+		};
 		D3C6E50A1EF4F60C007A24ED = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +148,9 @@
 		D3C6E5151EF4F60C007A24ED /* ApiHackathon */ = {
 			isa = PBXGroup;
 			children = (
+				D3BFEF531EF54FE90065F99D /* NewsGroup */,
+				D3BFEF461EF547D60065F99D /* CricketListCell */,
+				D3BFEF431EF545950065F99D /* Model */,
 				D3C6E5391EF53802007A24ED /* TrainListCell */,
 				D3C6E5341EF519C7007A24ED /* ThirdParty */,
 				D3C6E5311EF513CD007A24ED /* Controller */,
@@ -116,8 +169,6 @@
 			children = (
 				D3C6E5291EF4FE05007A24ED /* gridViewCell.swift */,
 				D3C6E52A1EF4FE05007A24ED /* gridViewCell.xib */,
-				D3C6E52D1EF50189007A24ED /* gridViewHeaderCell.swift */,
-				D3C6E52E1EF50189007A24ED /* gridViewHeaderCell.xib */,
 			);
 			name = GridViewLayout;
 			sourceTree = "<group>";
@@ -129,6 +180,9 @@
 				D3C6E5321EF513F2007A24ED /* FuelPriceController.swift */,
 				D3C6E5371EF52E68007A24ED /* ChennaiTrainRouteController.swift */,
 				D3C6E53E1EF53A64007A24ED /* TrainListViewController.swift */,
+				D3BFEF411EF5425E0065F99D /* CricketViewController.swift */,
+				D3BFEF4B1EF54C170065F99D /* NewsSourceListViewController.swift */,
+				D3BFEF4D1EF54C2E0065F99D /* NewsArticleViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -213,11 +267,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3C6E5211EF4F60D007A24ED /* LaunchScreen.storyboard in Resources */,
+				D3BFEF5B1EF554A00065F99D /* NewsArticleListCell.xib in Resources */,
+				D3BFEF571EF550130065F99D /* NewsSourceListCell.xib in Resources */,
 				D3C6E51E1EF4F60D007A24ED /* Assets.xcassets in Resources */,
 				D3C6E53D1EF5383C007A24ED /* TrainListCell.xib in Resources */,
 				D3C6E52C1EF4FE05007A24ED /* gridViewCell.xib in Resources */,
 				D3C6E51C1EF4F60C007A24ED /* Main.storyboard in Resources */,
-				D3C6E5301EF50189007A24ED /* gridViewHeaderCell.xib in Resources */,
+				D3BFEF4A1EF548010065F99D /* CricketCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,11 +336,19 @@
 				D3C6E5381EF52E68007A24ED /* ChennaiTrainRouteController.swift in Sources */,
 				D3C6E5331EF513F2007A24ED /* FuelPriceController.swift in Sources */,
 				D3C6E5191EF4F60C007A24ED /* ViewController.swift in Sources */,
-				D3C6E52F1EF50189007A24ED /* gridViewHeaderCell.swift in Sources */,
+				D3BFEF4E1EF54C2E0065F99D /* NewsArticleViewController.swift in Sources */,
 				D3C6E53F1EF53A64007A24ED /* TrainListViewController.swift in Sources */,
+				D3BFEF421EF5425E0065F99D /* CricketViewController.swift in Sources */,
+				D3BFEF521EF54D130065F99D /* CricketArticle.swift in Sources */,
 				D3C6E5171EF4F60C007A24ED /* AppDelegate.swift in Sources */,
 				D3C6E52B1EF4FE05007A24ED /* gridViewCell.swift in Sources */,
+				D3BFEF4C1EF54C170065F99D /* NewsSourceListViewController.swift in Sources */,
+				D3BFEF561EF550130065F99D /* NewsSourceListCell.swift in Sources */,
+				D3BFEF5A1EF554A00065F99D /* NewsArticleListCell.swift in Sources */,
+				D3BFEF501EF54D040065F99D /* CricketSourceList.swift in Sources */,
+				D3BFEF491EF548010065F99D /* CricketCell.swift in Sources */,
 				D3C6E5361EF519E0007A24ED /* HADropDown.swift in Sources */,
+				D3BFEF451EF545A70065F99D /* CricketList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

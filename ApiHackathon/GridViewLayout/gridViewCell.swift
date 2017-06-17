@@ -12,6 +12,10 @@ class gridViewCell: UICollectionViewCell {
 
   @IBOutlet weak var gridViewContainer: UIView!
   
+  @IBOutlet weak var img: UIImageView!
+  
+  @IBOutlet weak var title: UILabel!
+  
     override func awakeFromNib() {
         super.awakeFromNib()
 

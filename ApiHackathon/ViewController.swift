@@ -14,19 +14,26 @@ class ViewController: UIViewController {
   
   var colors = [UIColor]()
   
+  var gridTitles = [String]()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    colors = [UIColor.red,UIColor.blue,UIColor.black,UIColor.yellow,UIColor.purple]
     
-
+    colors = [UIColor(red: 255/255.0, green: 133/255.0, blue: 0/255.0, alpha: 1.0),
+    UIColor(red: 46/255.0, green: 204/255.0, blue: 133/255.0, alpha: 1.0),
+    UIColor(red: 52/255.0, green: 150/255.0, blue: 219/255.0, alpha: 1.0),
+    UIColor(red: 155/255.0, green: 89/255.0, blue: 182/255.0, alpha: 1.0)]
+    
+    
     let nib = UINib(nibName: "gridViewCell", bundle: nil)
     gridViewCollectionview.register(nib, forCellWithReuseIdentifier: "gridViewCell")
     gridViewCollectionview.contentInset = UIEdgeInsetsMake(5, 5, 5, 5)
 
-//    let nib1 = UINib(nibName: "gridViewHeaderCell", bundle: nil)
-//    gridViewCollectionview.register(nib1, forSupplementaryViewOfKind: , withReuseIdentifier: <#T##String#>)
+
+    
+    self.gridTitles = ["Fuel","Train","Cricket","News"]
+    
     self.automaticallyAdjustsScrollViewInsets = false
   }
 
@@ -47,13 +54,18 @@ extension ViewController:UICollectionViewDataSource,UICollectionViewDelegate,UIC
   }
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return self.colors.count
+    return self.gridTitles.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gridViewCell", for: indexPath) as! gridViewCell
     let color = self.colors[indexPath.item]
     cell.gridViewContainer.backgroundColor = color
+    let values = self.gridTitles[indexPath.row]
+
+    cell.img.image = UIImage(named: values)
+    cell.title.text = values
+    
     return cell
   }
   
@@ -69,6 +81,12 @@ extension ViewController:UICollectionViewDataSource,UICollectionViewDelegate,UIC
     }else if indexPath.item == 1
     {
       self.performSegue(withIdentifier: "passChennaiRouteData", sender: nil)
+    }else if indexPath.item == 2
+    {
+      self.performSegue(withIdentifier: "passCricketData", sender: nil)
+    }else if indexPath.item == 3
+    {
+      self.performSegue(withIdentifier: "passNewsSourceData", sender: nil)
     }
   }
   
