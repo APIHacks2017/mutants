@@ -1,0 +1,50 @@
+PODS:
+  - Alamofire (4.4.0)
+  - IQKeyboardManagerSwift (4.0.9)
+  - Kingfisher (3.6.2)
+  - ObjectMapper (2.2.6)
+  - ObjectMapper+Realm (0.3):
+    - ObjectMapper
+    - RealmSwift
+  - PromiseKit (4.2.0):
+    - PromiseKit/Foundation (= 4.2.0)
+    - PromiseKit/QuartzCore (= 4.2.0)
+    - PromiseKit/UIKit (= 4.2.0)
+  - PromiseKit/CorePromise (4.2.0)
+  - PromiseKit/Foundation (4.2.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.2.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (4.2.0):
+    - PromiseKit/CorePromise
+  - Realm (2.6.2):
+    - Realm/Headers (= 2.6.2)
+  - Realm/Headers (2.6.2)
+  - RealmSwift (2.6.2):
+    - Realm (= 2.6.2)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - IQKeyboardManagerSwift
+  - Kingfisher (~> 3.0)
+  - ObjectMapper (~> 2.2)
+  - ObjectMapper+Realm
+  - PromiseKit (~> 4.0)
+  - RealmSwift
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  IQKeyboardManagerSwift: 2eefe6c429b86aa08bfbc1b5c891164d754adf91
+  Kingfisher: 2c94e72c6830622c71d06adf4ea024c37d316830
+  ObjectMapper: 042708195cc46c20871cbcbec0453826398273fd
+  ObjectMapper+Realm: 98992926f775a4fdf1c025541b97c78119f15b8a
+  PromiseKit: 08dfb783c161ddcd95b7912421f14c5113fd8318
+  Realm: 29222766425b9f831228f81b63f0e38a97a4d700
+  RealmSwift: d161a80f96cb91ae88391a7d5a9cf08024a7bc8e
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: 0bdcd064d94abdde08c1478f9a928f0446003706
+
+COCOAPODS: 1.2.0
