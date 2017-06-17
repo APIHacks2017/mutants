@@ -19,6 +19,7 @@
 		D3BFEF571EF550130065F99D /* NewsSourceListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3BFEF551EF550130065F99D /* NewsSourceListCell.xib */; };
 		D3BFEF5A1EF554A00065F99D /* NewsArticleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BFEF581EF554A00065F99D /* NewsArticleListCell.swift */; };
 		D3BFEF5B1EF554A00065F99D /* NewsArticleListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3BFEF591EF554A00065F99D /* NewsArticleListCell.xib */; };
+		D3BFEF5D1EF56A0A0065F99D /* TrainRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BFEF5C1EF56A0A0065F99D /* TrainRoute.swift */; };
 		D3C6E5171EF4F60C007A24ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6E5161EF4F60C007A24ED /* AppDelegate.swift */; };
 		D3C6E5191EF4F60C007A24ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C6E5181EF4F60C007A24ED /* ViewController.swift */; };
 		D3C6E51C1EF4F60C007A24ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3C6E51A1EF4F60C007A24ED /* Main.storyboard */; };
@@ -50,7 +51,8 @@
 		D3BFEF551EF550130065F99D /* NewsSourceListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewsSourceListCell.xib; path = NewsGroupCell/NewsSourceListCell.xib; sourceTree = "<group>"; };
 		D3BFEF581EF554A00065F99D /* NewsArticleListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsArticleListCell.swift; path = NewsGroupCell/NewsArticleListCell.swift; sourceTree = "<group>"; };
 		D3BFEF591EF554A00065F99D /* NewsArticleListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewsArticleListCell.xib; path = NewsGroupCell/NewsArticleListCell.xib; sourceTree = "<group>"; };
-		D3C6E5131EF4F60C007A24ED /* ApiHackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApiHackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3BFEF5C1EF56A0A0065F99D /* TrainRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrainRoute.swift; path = Model/TrainRoute.swift; sourceTree = "<group>"; };
+		D3C6E5131EF4F60C007A24ED /* TouchEver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchEver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C6E5161EF4F60C007A24ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3C6E5181EF4F60C007A24ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D3C6E51B1EF4F60C007A24ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				D3BFEF441EF545A70065F99D /* CricketList.swift */,
 				D3BFEF4F1EF54D040065F99D /* CricketSourceList.swift */,
 				D3BFEF511EF54D130065F99D /* CricketArticle.swift */,
+				D3BFEF5C1EF56A0A0065F99D /* TrainRoute.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -140,7 +143,7 @@
 		D3C6E5141EF4F60C007A24ED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D3C6E5131EF4F60C007A24ED /* ApiHackathon.app */,
+				D3C6E5131EF4F60C007A24ED /* TouchEver.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -224,7 +227,7 @@
 			);
 			name = ApiHackathon;
 			productName = ApiHackathon;
-			productReference = D3C6E5131EF4F60C007A24ED /* ApiHackathon.app */;
+			productReference = D3C6E5131EF4F60C007A24ED /* TouchEver.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -340,6 +343,7 @@
 				D3C6E53F1EF53A64007A24ED /* TrainListViewController.swift in Sources */,
 				D3BFEF421EF5425E0065F99D /* CricketViewController.swift in Sources */,
 				D3BFEF521EF54D130065F99D /* CricketArticle.swift in Sources */,
+				D3BFEF5D1EF56A0A0065F99D /* TrainRoute.swift in Sources */,
 				D3C6E5171EF4F60C007A24ED /* AppDelegate.swift in Sources */,
 				D3C6E52B1EF4FE05007A24ED /* gridViewCell.swift in Sources */,
 				D3BFEF4C1EF54C170065F99D /* NewsSourceListViewController.swift in Sources */,
@@ -475,7 +479,7 @@
 				INFOPLIST_FILE = ApiHackathon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.megamid.ApiHackathon;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TouchEver;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -488,7 +492,7 @@
 				INFOPLIST_FILE = ApiHackathon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.megamid.ApiHackathon;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TouchEver;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

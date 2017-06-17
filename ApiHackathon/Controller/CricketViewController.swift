@@ -10,16 +10,20 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import ObjectMapper
-
+import SVProgressHUD
 class CricketViewController: UIViewController {
   @IBOutlet weak var cricketTableList: UITableView!
 
+  var passCricketColor = UIColor()
   var cricketMapper = [AnyObject]()
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+
+      
     let nib = UINib(nibName: "CricketCell", bundle: nil)
       cricketTableList.register(nib, forCellReuseIdentifier: "CricketCell")
-      cricketTableList.translatesAutoresizingMaskIntoConstraints = true
+
   }
 
   override func viewDidAppear(_ animated: Bool) {
@@ -31,6 +35,8 @@ class CricketViewController: UIViewController {
   
   func callApi()
   {
+    
+    SVProgressHUD.show()
     
     let url = "http://52.36.211.72:5555/gateway/Cricket%20API/1.0/matches"
     
@@ -61,9 +67,12 @@ class CricketViewController: UIViewController {
         
         print("the feed list is \(feedArr.count)")
         self.cricketTableList.reloadData()
+        SVProgressHUD.dismiss()
         
       case .failure(let error):
         print("the error is \(error)")
+        SVProgressHUD.dismiss()
+
         
       }
     }
@@ -100,14 +109,29 @@ extension CricketViewController:UITableViewDataSource,UITableViewDelegate
     let vls = feedArr[indexPath.item]
     
     cell.teamLabel.text = "\(vls.team1!) vs \(vls.team2!)"
-    cell.dateLabel.text = "\(vls.date!)"
+    cell.dateLabel.text = self.dateValue(str: vls.date!)
     
     
     return cell
   }
   
+  func dateValue(str:String) -> String
+  {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+    
+    let dateObj = dateFormatter.date(from: str)
+    
+    dateFormatter.dateFormat = "dd-MMM-yyyy"
+    
+    var dt1 = dateFormatter.string(from: dateObj!)
+
+    return dt1
+    
+  }
+  
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 108.0
+    return 80.0
   }
   
 }

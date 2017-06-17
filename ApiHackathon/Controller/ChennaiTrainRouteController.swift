@@ -9,6 +9,8 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import ObjectMapper
+import SVProgressHUD
 
 class ChennaiTrainRouteController: UIViewController {
 
@@ -18,15 +20,29 @@ class ChennaiTrainRouteController: UIViewController {
   
     var sourcePlace = [String]()
     var destinationPlace = [String]()
+  var chennaiTrainColor = UIColor()
+  var mapper = [AnyObject]()
+
+  @IBOutlet weak var searchBtn: UIButton!
   
     var json : JSON!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//      self.view.backgroundColor = self.chennaiTrainColor
+
       sourceDestination.delegate = self
       destinaitonDropDown.delegate = self
 
+      
+      self.searchBtn.layer.cornerRadius = 5.0
+      self.searchBtn.clipsToBounds = true
+      self.searchBtn.layer.borderWidth = 1.0
+      self.searchBtn.layer.borderColor = UIColor.black.cgColor
+      self.searchBtn.setTitleColor(UIColor.black, for: .normal)
+
+      
     }
   
   
@@ -34,7 +50,7 @@ class ChennaiTrainRouteController: UIViewController {
     if segue.identifier == "passTrainList"
     {
       let destiny = segue.destination as! TrainListViewController
-      destiny.json = json
+      destiny.mapper = mapper
       
     }
   }
@@ -55,6 +71,8 @@ class ChennaiTrainRouteController: UIViewController {
   
   func callBusApi(source:String,destination:String)
   {
+    
+    SVProgressHUD.show()
     let url = "http://52.36.211.72:5555/gateway/Chennai/v1/train/time"
     
     let parameter : Parameters = ["source":source,
@@ -70,10 +88,21 @@ class ChennaiTrainRouteController: UIViewController {
       let json = JSON(values)
         print("the values is \(json)")
       
-        self.json = json
+      let arr = json.arrayObject
+      
+      self.mapper.removeAll()
+      
+      arr?.forEach({ (vls) in
+        self.mapper.append(vls as AnyObject)
+      })
+      
+   
+      SVProgressHUD.dismiss()
         self.performSegue(withIdentifier: "passTrainList", sender: nil)
       case .failure(let error):
         print("the error is \(error)")
+        SVProgressHUD.dismiss()
+
       
       }
     }
@@ -83,6 +112,8 @@ class ChennaiTrainRouteController: UIViewController {
   
   func callBusRouteApi()
   {
+    
+    SVProgressHUD.show()
     
     let url = "http://52.36.211.72:5555/gateway/Chennai/v1/train/routes"
     
@@ -96,11 +127,13 @@ class ChennaiTrainRouteController: UIViewController {
         let json = JSON(values)
         self.getJsonValues(json: json)
         
-        
+        SVProgressHUD.dismiss()
+
       case .failure(let error):
         print("the error is \(error)")
         
-        
+        SVProgressHUD.dismiss()
+
       }
     }
     

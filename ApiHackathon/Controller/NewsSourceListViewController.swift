@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import ObjectMapper
+import SVProgressHUD
 
 class NewsSourceListViewController: UIViewController {
 
@@ -18,13 +19,13 @@ class NewsSourceListViewController: UIViewController {
   var passIdData = String()
   var newsSourceMapper = [AnyObject]()
   
+  var newsSourceColor = UIColor()
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
       let nib = UINib(nibName: "NewsSourceListCell", bundle: nil)
       newsSourceTableView.register(nib, forCellReuseIdentifier: "NewsSourceListCell")
-      
+      newsSourceTableView.translatesAutoresizingMaskIntoConstraints = false
   }
   
   
@@ -35,6 +36,8 @@ class NewsSourceListViewController: UIViewController {
 
   func callNewsSourceApi()
   {
+    
+    SVProgressHUD.show()
     
     let url = "http://52.36.211.72:5555/gateway/NewsAPI/1.0/sources"
     let header : HTTPHeaders = ["x-Gateway-APIKey":"1a33b919-5dcb-4556-8a29-701a3db3e885",
@@ -64,10 +67,11 @@ class NewsSourceListViewController: UIViewController {
         print("the feed count is \(feedArr.count)")
         
         self.newsSourceTableView.reloadData()
-        
+          SVProgressHUD.dismiss()
       
       case .failure(let error):
         print("the error is \(error)")
+        SVProgressHUD.dismiss()
         
       }
     }
@@ -121,7 +125,7 @@ extension NewsSourceListViewController:UITableViewDataSource,UITableViewDelegate
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 220.0
+    return 80.0
   }
   
   

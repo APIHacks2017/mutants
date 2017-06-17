@@ -11,6 +11,7 @@ import Alamofire
 import SwiftyJSON
 import ObjectMapper
 import Kingfisher
+import SVProgressHUD
 
 class NewsArticleViewController: UIViewController {
 
@@ -38,6 +39,8 @@ class NewsArticleViewController: UIViewController {
   
   func callNewsArticleApi()
   {
+    SVProgressHUD.show()
+    
     
     let url = "http://52.36.211.72:5555/gateway/NewsAPI/1.0/articles"
     let header : HTTPHeaders = ["x-Gateway-APIKey":"1a33b919-5dcb-4556-8a29-701a3db3e885",
@@ -69,9 +72,11 @@ class NewsArticleViewController: UIViewController {
         print("the feed count is \(feedArr.count)")
         
         self.newsArticleTableView.reloadData()
-        
+        SVProgressHUD.dismiss()
       case .failure(let error):
         print("the error is \(error)")
+        
+        SVProgressHUD.dismiss()
         
       }
     }
@@ -114,7 +119,7 @@ extension NewsArticleViewController:UITableViewDataSource,UITableViewDelegate
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 320.0
+    return 350.0
   }
   
   

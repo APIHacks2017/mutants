@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import PromiseKit
 import SwiftyJSON
+import SVProgressHUD
 
 class FuelPriceController: UIViewController {
 
@@ -18,11 +19,12 @@ class FuelPriceController: UIViewController {
   
   @IBOutlet weak var typesDropdown: HADropDown!
   
+  @IBOutlet weak var searchBtn: UIButton!
   
   @IBOutlet weak var priceLabel: UILabel!
   
   
-  
+  var fuelColor = UIColor()
   
   var selectedCountry : String?
   var selectedType : String?
@@ -32,10 +34,20 @@ class FuelPriceController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+//      self.view.backgroundColor = self.fuelColor
       typesDropdown.delegate = self
       dropdown.delegate = self
       typesArray = ["petrol","diesel"]
       typesDropdown.items = typesArray
+      
+      self.searchBtn.layer.cornerRadius = 5.0
+      self.searchBtn.clipsToBounds = true
+      self.searchBtn.layer.borderWidth = 1.0
+      self.searchBtn.layer.borderColor = UIColor.black.cgColor
+      self.searchBtn.setTitleColor(UIColor.black, for: .normal)
+      
+      self.priceLabel.text = ""
       
   }
 
@@ -65,6 +77,9 @@ class FuelPriceController: UIViewController {
   {
     return Promise{ fullfill,reject in
 
+      
+      SVProgressHUD.show()
+      
       let url = "http://52.36.211.72:5555/gateway/FuelPriceIndia/1.0/main/city_list"
       
       let header : HTTPHeaders = ["x-Gateway-APIKey":"1a33b919-5dcb-4556-8a29-701a3db3e885",
@@ -100,6 +115,8 @@ class FuelPriceController: UIViewController {
     print("the response is \(cities)")
 
     dropdown.items = self.citiesArray
+    
+    SVProgressHUD.dismiss()
   }
   
   
@@ -113,6 +130,9 @@ class FuelPriceController: UIViewController {
   
   
   @IBAction func searchBtn(_ sender: Any) {
+    
+    
+    
     
     
     print("the price list is \(self.dropdown.title) and \(self.typesDropdown.title)")
@@ -130,6 +150,8 @@ class FuelPriceController: UIViewController {
     let header : HTTPHeaders = ["x-Gateway-APIKey":"1a33b919-5dcb-4556-8a29-701a3db3e885",
                                 "Authorization":"Basic Og=="]
 
+    SVProgressHUD.show()
+
     Alamofire.request(url, method: .get, headers: header).responseJSON { (response) in
       switch response.result
       {
@@ -138,9 +160,13 @@ class FuelPriceController: UIViewController {
          let vl = json["price"]
         let price = String(describing: vl)
       
-        self.priceLabel.text = "the price value is \(price)"
+        self.priceLabel.text = "The price value is \(price)"
+        SVProgressHUD.dismiss()
       case .failure(let error):
         print("the error is \(error)")
+        SVProgressHUD.dismiss()
+
+        
       }
     }
   }

@@ -22,6 +22,7 @@ PODS:
   - Realm/Headers (2.6.2)
   - RealmSwift (2.6.2):
     - Realm (= 2.6.2)
+  - SVProgressHUD (2.1.2)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - ObjectMapper+Realm
   - PromiseKit (~> 4.0)
   - RealmSwift
+  - SVProgressHUD
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -43,8 +45,9 @@ SPEC CHECKSUMS:
   PromiseKit: 08dfb783c161ddcd95b7912421f14c5113fd8318
   Realm: 29222766425b9f831228f81b63f0e38a97a4d700
   RealmSwift: d161a80f96cb91ae88391a7d5a9cf08024a7bc8e
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 0bdcd064d94abdde08c1478f9a928f0446003706
+PODFILE CHECKSUM: c70f5d94f5c557fb45a1c1f2578e4ce54e514c4a
 
 COCOAPODS: 1.2.0

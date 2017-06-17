@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Cricket View Controller-->
         <scene sceneID="HXG-qy-JHr">
             <objects>
-                <viewController id="54O-R5-pw8" customClass="CricketViewController" customModule="ApiHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="54O-R5-pw8" customClass="CricketViewController" customModule="TouchEver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ajt-3O-kV1"/>
                         <viewControllerLayoutGuide type="bottom" id="HKW-sQ-HnO"/>
@@ -21,8 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="geS-tQ-TIT">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="geS-tQ-TIT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="54O-R5-pw8" id="Rzo-rf-TeL"/>
@@ -32,10 +33,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="HKW-sQ-HnO" firstAttribute="top" secondItem="geS-tQ-TIT" secondAttribute="bottom" id="RCF-Nl-7JE"/>
-                            <constraint firstItem="geS-tQ-TIT" firstAttribute="leading" secondItem="yXE-eU-Q8W" secondAttribute="leading" id="Slp-al-5Yb"/>
-                            <constraint firstAttribute="trailing" secondItem="geS-tQ-TIT" secondAttribute="trailing" id="cR2-zE-NIE"/>
-                            <constraint firstItem="geS-tQ-TIT" firstAttribute="top" secondItem="ajt-3O-kV1" secondAttribute="bottom" id="nxd-kt-2Fq"/>
+                            <constraint firstAttribute="trailing" secondItem="geS-tQ-TIT" secondAttribute="trailing" id="Vib-d9-02Q"/>
+                            <constraint firstItem="HKW-sQ-HnO" firstAttribute="top" secondItem="geS-tQ-TIT" secondAttribute="bottom" id="c0l-Za-tJa"/>
+                            <constraint firstItem="geS-tQ-TIT" firstAttribute="top" secondItem="yXE-eU-Q8W" secondAttribute="top" id="dCa-gs-hyO"/>
+                            <constraint firstItem="geS-tQ-TIT" firstAttribute="leading" secondItem="yXE-eU-Q8W" secondAttribute="leading" id="wHL-kL-6Cj"/>
                         </constraints>
                     </view>
                     <connections>
@@ -44,12 +45,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zED-aE-jJO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="399" y="231"/>
+            <point key="canvasLocation" x="397.60000000000002" y="230.73463268365819"/>
         </scene>
         <!--News Article View Controller-->
         <scene sceneID="8kv-3s-B5R">
             <objects>
-                <viewController id="2d6-wj-nY2" customClass="NewsArticleViewController" customModule="ApiHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2d6-wj-nY2" customClass="NewsArticleViewController" customModule="TouchEver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xnp-cM-f1l"/>
                         <viewControllerLayoutGuide type="bottom" id="R5i-VR-GTf"/>
@@ -58,8 +59,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ukg-EB-Ka8">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ukg-EB-Ka8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="2d6-wj-nY2" id="hnp-BF-x1l"/>
@@ -69,10 +70,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="ukg-EB-Ka8" secondAttribute="trailing" id="0Ty-lF-6dL"/>
-                            <constraint firstItem="R5i-VR-GTf" firstAttribute="top" secondItem="ukg-EB-Ka8" secondAttribute="bottom" id="F0L-ki-wkw"/>
-                            <constraint firstItem="ukg-EB-Ka8" firstAttribute="leading" secondItem="53G-rG-Xur" secondAttribute="leading" id="tcR-at-AGh"/>
-                            <constraint firstItem="ukg-EB-Ka8" firstAttribute="top" secondItem="xnp-cM-f1l" secondAttribute="bottom" id="zQn-JZ-Zag"/>
+                            <constraint firstItem="ukg-EB-Ka8" firstAttribute="leading" secondItem="53G-rG-Xur" secondAttribute="leading" id="ISB-ro-DFw"/>
+                            <constraint firstItem="R5i-VR-GTf" firstAttribute="top" secondItem="ukg-EB-Ka8" secondAttribute="bottom" id="Yi3-KH-dSN"/>
+                            <constraint firstAttribute="trailing" secondItem="ukg-EB-Ka8" secondAttribute="trailing" id="ctr-4D-4tO"/>
+                            <constraint firstItem="ukg-EB-Ka8" firstAttribute="top" secondItem="53G-rG-Xur" secondAttribute="top" id="oeZ-2c-vnj"/>
                         </constraints>
                     </view>
                     <connections>
@@ -81,12 +82,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bkf-s5-uJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-105" y="869"/>
+            <point key="canvasLocation" x="-106.40000000000001" y="868.51574212893559"/>
         </scene>
         <!--News Source List View Controller-->
         <scene sceneID="B1e-Pw-BBZ">
             <objects>
-                <viewController id="OMF-Kg-LjK" customClass="NewsSourceListViewController" customModule="ApiHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OMF-Kg-LjK" customClass="NewsSourceListViewController" customModule="TouchEver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2G7-z6-Hdi"/>
                         <viewControllerLayoutGuide type="bottom" id="RPA-tM-IHq"/>
@@ -95,8 +96,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="i6Y-7Q-V3g">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="i6Y-7Q-V3g">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="OMF-Kg-LjK" id="wDU-cX-8Ap"/>
@@ -106,10 +107,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="i6Y-7Q-V3g" secondAttribute="trailing" id="92Y-s0-iDL"/>
-                            <constraint firstItem="i6Y-7Q-V3g" firstAttribute="top" secondItem="2G7-z6-Hdi" secondAttribute="bottom" id="E3u-wa-BlS"/>
-                            <constraint firstItem="RPA-tM-IHq" firstAttribute="top" secondItem="i6Y-7Q-V3g" secondAttribute="bottom" id="JkV-bf-eHv"/>
-                            <constraint firstItem="i6Y-7Q-V3g" firstAttribute="leading" secondItem="Hck-0k-ZcQ" secondAttribute="leading" id="Mvn-d1-Zjf"/>
+                            <constraint firstItem="i6Y-7Q-V3g" firstAttribute="top" secondItem="Hck-0k-ZcQ" secondAttribute="top" id="07q-1K-6RX"/>
+                            <constraint firstItem="i6Y-7Q-V3g" firstAttribute="leading" secondItem="Hck-0k-ZcQ" secondAttribute="leading" id="Vkk-rb-fbB"/>
+                            <constraint firstItem="RPA-tM-IHq" firstAttribute="top" secondItem="i6Y-7Q-V3g" secondAttribute="bottom" id="cZI-rB-6Ip"/>
+                            <constraint firstAttribute="trailing" secondItem="i6Y-7Q-V3g" secondAttribute="trailing" id="kvG-oX-YnC"/>
                         </constraints>
                     </view>
                     <connections>
@@ -119,12 +120,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NSS-go-Ujs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="634" y="870"/>
+            <point key="canvasLocation" x="632.79999999999995" y="869.41529235382313"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ApiHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TouchEver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -173,7 +174,7 @@
         <!--Chennai Train Route Controller-->
         <scene sceneID="DgA-Qc-onm">
             <objects>
-                <viewController id="lz5-5N-6IC" customClass="ChennaiTrainRouteController" customModule="ApiHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lz5-5N-6IC" customClass="ChennaiTrainRouteController" customModule="TouchEver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8rT-Jg-LBm"/>
                         <viewControllerLayoutGuide type="bottom" id="XDj-Y6-A1m"/>
@@ -182,35 +183,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AIk-i1-VBG" customClass="HADropDown" customModule="ApiHackathon" customModuleProvider="target">
-                                <rect key="frame" x="16" y="127" width="300" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AIk-i1-VBG" customClass="HADropDown" customModule="TouchEver" customModuleProvider="target">
+                                <rect key="frame" x="20" y="150" width="300" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IgW-Gw-drX"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Source"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Please select source location"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hNE-Bg-gan" customClass="HADropDown" customModule="ApiHackathon" customModuleProvider="target">
-                                <rect key="frame" x="25" y="232" width="300" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNE-Bg-gan" customClass="HADropDown" customModule="TouchEver" customModuleProvider="target">
+                                <rect key="frame" x="20" y="232" width="300" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="awE-Bn-Q6r"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Destination"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Please select destination location"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AeX-id-6n4">
-                                <rect key="frame" x="152" y="366" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AeX-id-6n4">
+                                <rect key="frame" x="95" y="343" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="DDA-cs-qKu"/>
+                                </constraints>
+                                <state key="normal" title="Search"/>
                                 <connections>
                                     <action selector="searchBtn:" destination="lz5-5N-6IC" eventType="touchUpInside" id="REe-WU-Owo"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="hNE-Bg-gan" secondAttribute="trailing" constant="39" id="3o4-5T-V3e"/>
+                            <constraint firstItem="AIk-i1-VBG" firstAttribute="top" secondItem="8rT-Jg-LBm" secondAttribute="bottom" constant="86" id="68O-Bp-ATS"/>
+                            <constraint firstItem="hNE-Bg-gan" firstAttribute="top" secondItem="AIk-i1-VBG" secondAttribute="bottom" constant="32" id="BOZ-G4-Qpa"/>
+                            <constraint firstItem="hNE-Bg-gan" firstAttribute="leading" secondItem="d7c-EC-Fnr" secondAttribute="leadingMargin" constant="4" id="LDr-rM-kmH"/>
+                            <constraint firstItem="AIk-i1-VBG" firstAttribute="leading" secondItem="d7c-EC-Fnr" secondAttribute="leadingMargin" constant="4" id="YIm-hq-4bJ"/>
+                            <constraint firstItem="AeX-id-6n4" firstAttribute="centerX" secondItem="hNE-Bg-gan" secondAttribute="centerX" id="gTd-VU-nII"/>
+                            <constraint firstItem="AeX-id-6n4" firstAttribute="top" secondItem="hNE-Bg-gan" secondAttribute="bottom" constant="61" id="vlk-Tz-ysf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AIk-i1-VBG" secondAttribute="trailing" constant="39" id="zvT-uW-d9p"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="destinaitonDropDown" destination="hNE-Bg-gan" id="TEu-Cl-YnE"/>
+                        <outlet property="searchBtn" destination="AeX-id-6n4" id="ufL-A7-bg9"/>
                         <outlet property="sourceDestination" destination="AIk-i1-VBG" id="eF3-Yv-qe9"/>
                         <segue destination="jbf-Qk-Mp1" kind="show" identifier="passTrainList" id="e2H-iv-era"/>
                     </connections>
@@ -222,7 +240,7 @@
         <!--Train List View Controller-->
         <scene sceneID="sut-ZM-dlw">
             <objects>
-                <viewController id="jbf-Qk-Mp1" customClass="TrainListViewController" customModule="ApiHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jbf-Qk-Mp1" customClass="TrainListViewController" customModule="TouchEver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="74h-HK-tAc"/>
                         <viewControllerLayoutGuide type="bottom" id="snV-4X-oFO"/>
@@ -242,10 +260,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="AO2-Ng-s5b" firstAttribute="top" secondItem="74h-HK-tAc" secondAttribute="bottom" id="9zK-6L-vCi"/>
-                            <constraint firstItem="snV-4X-oFO" firstAttribute="top" secondItem="AO2-Ng-s5b" secondAttribute="bottom" id="WFh-tQ-fO9"/>
-                            <constraint firstItem="AO2-Ng-s5b" firstAttribute="leading" secondItem="plN-bR-7hT" secondAttribute="leading" id="hbJ-zo-Hlh"/>
-                            <constraint firstAttribute="trailing" secondItem="AO2-Ng-s5b" secondAttribute="trailing" id="lwL-td-RgQ"/>
+                            <constraint firstAttribute="trailing" secondItem="AO2-Ng-s5b" secondAttribute="trailing" id="9gO-6I-cg6"/>
+                            <constraint firstItem="AO2-Ng-s5b" firstAttribute="leading" secondItem="plN-bR-7hT" secondAttribute="leading" id="icm-0J-h0y"/>
+                            <constraint firstItem="snV-4X-oFO" firstAttribute="top" secondItem="AO2-Ng-s5b" secondAttribute="bottom" id="mDG-uz-dOH"/>
+                            <constraint firstItem="AO2-Ng-s5b" firstAttribute="top" secondItem="74h-HK-tAc" secondAttribute="bottom" id="wXW-J0-IHI"/>
                         </constraints>
                     </view>
                     <connections>
@@ -259,7 +277,7 @@
         <!--Fuel Price Controller-->
         <scene sceneID="vRt-XJ-7bC">
             <objects>
-                <viewController id="9yv-rh-ieS" customClass="FuelPriceController" customModule="ApiHackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="9yv-rh-ieS" customClass="FuelPriceController" customModule="TouchEver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8DV-QT-YOY"/>
                         <viewControllerLayoutGuide type="bottom" id="nRu-Vw-zRd"/>
@@ -268,43 +286,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vsm-UZ-wR0" customClass="HADropDown" customModule="ApiHackathon" customModuleProvider="target">
-                                <rect key="frame" x="38" y="100" width="300" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vsm-UZ-wR0" customClass="HADropDown" customModule="TouchEver" customModuleProvider="target">
+                                <rect key="frame" x="38" y="184" width="300" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6XJ-gM-zaa"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="Select the city"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SOh-dr-Wno" customClass="HADropDown" customModule="ApiHackathon" customModuleProvider="target">
-                                <rect key="frame" x="38" y="160" width="300" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOh-dr-Wno" customClass="HADropDown" customModule="TouchEver" customModuleProvider="target">
+                                <rect key="frame" x="38" y="244" width="300" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GEl-3Y-2t8"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Type"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Choose the fuel type"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUc-g3-JRy">
-                                <rect key="frame" x="155" y="271" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUc-g3-JRy">
+                                <rect key="frame" x="128" y="344" width="120" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="0xz-Jt-luI"/>
+                                    <constraint firstAttribute="height" constant="40" id="DJt-Ye-Wzu"/>
+                                </constraints>
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <action selector="searchBtn:" destination="9yv-rh-ieS" eventType="touchUpInside" id="3U4-4K-e6U"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPT-GF-6CK">
-                                <rect key="frame" x="97" y="368" width="223" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPT-GF-6CK">
+                                <rect key="frame" x="97" y="394" width="223" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="UEJ-Bq-BFY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SOh-dr-Wno" firstAttribute="top" secondItem="Vsm-UZ-wR0" secondAttribute="bottom" constant="10" id="C8m-ma-Ecn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SOh-dr-Wno" secondAttribute="trailing" constant="21" id="KLx-wD-jjH"/>
+                            <constraint firstItem="LPT-GF-6CK" firstAttribute="top" secondItem="BUc-g3-JRy" secondAttribute="bottom" constant="10" id="PYh-ro-m4T"/>
+                            <constraint firstItem="SOh-dr-Wno" firstAttribute="leading" secondItem="hgP-Oh-b9i" secondAttribute="leadingMargin" constant="22" id="QNE-9d-94d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LPT-GF-6CK" secondAttribute="trailing" constant="39" id="RbJ-N3-ZV8"/>
+                            <constraint firstItem="BUc-g3-JRy" firstAttribute="centerX" secondItem="hgP-Oh-b9i" secondAttribute="centerX" id="We1-VZ-ttp"/>
+                            <constraint firstItem="Vsm-UZ-wR0" firstAttribute="top" secondItem="8DV-QT-YOY" secondAttribute="bottom" constant="120" id="aBe-ZA-wMe"/>
+                            <constraint firstItem="LPT-GF-6CK" firstAttribute="leading" secondItem="hgP-Oh-b9i" secondAttribute="leadingMargin" constant="81" id="eEk-ge-zFu"/>
+                            <constraint firstItem="BUc-g3-JRy" firstAttribute="top" secondItem="SOh-dr-Wno" secondAttribute="bottom" constant="50" id="h6j-Be-qbD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vsm-UZ-wR0" secondAttribute="trailing" constant="21" id="iyw-DO-kRU"/>
+                            <constraint firstItem="Vsm-UZ-wR0" firstAttribute="leading" secondItem="hgP-Oh-b9i" secondAttribute="leadingMargin" constant="22" id="v3S-qM-x8i"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="dropdown" destination="Vsm-UZ-wR0" id="4Qw-Yo-IR5"/>
                         <outlet property="priceLabel" destination="LPT-GF-6CK" id="jvs-Ze-aoX"/>
+                        <outlet property="searchBtn" destination="BUc-g3-JRy" id="aqw-YN-Qfk"/>
                         <outlet property="typesDropdown" destination="SOh-dr-Wno" id="Syj-b6-XFj"/>
                     </connections>
                 </viewController>

@@ -15,6 +15,7 @@ class ViewController: UIViewController {
   var colors = [UIColor]()
   
   var gridTitles = [String]()
+  var color = UIColor()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -75,18 +76,52 @@ extension ViewController:UICollectionViewDataSource,UICollectionViewDelegate,UIC
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     
+    let passColor = self.colors[indexPath.item]
+
     if indexPath.item == 0
     {
+      self.color = passColor
       self.performSegue(withIdentifier: "passFuelData", sender: nil)
     }else if indexPath.item == 1
     {
+      self.color = passColor
+
       self.performSegue(withIdentifier: "passChennaiRouteData", sender: nil)
     }else if indexPath.item == 2
     {
+      self.color = passColor
+
       self.performSegue(withIdentifier: "passCricketData", sender: nil)
     }else if indexPath.item == 3
     {
+      self.color = passColor
+
       self.performSegue(withIdentifier: "passNewsSourceData", sender: nil)
+    }
+  }
+  
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "passFuelData"
+    {
+      let passFuel = segue.destination as! FuelPriceController
+      passFuel.fuelColor = self.color
+      
+    }else if segue.identifier == "passChennaiRouteData"
+    {
+      let passChennai = segue.destination as! ChennaiTrainRouteController
+      passChennai.chennaiTrainColor = self.color
+      
+    }else if segue.identifier == "passCricketData"
+    {
+      let passCricket = segue.destination as! CricketViewController
+      passCricket.passCricketColor = self.color
+      
+    }else if segue.identifier == "passNewsSourceData"
+    {
+      let passNewsSource = segue.destination as! NewsSourceListViewController
+      passNewsSource.newsSourceColor = self.color
+      
     }
   }
   
